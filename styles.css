@@ -1,0 +1,26 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #1f2937;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.col {
+    border: grey 1px dotted;
+    height: 50px;
+    width: 50px;
+}
+
+.col:hover {
+    background-color: #1f2937;
+}
