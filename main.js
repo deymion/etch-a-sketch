@@ -9,9 +9,9 @@ function createGrid(rows = 1, cols = 1) {
         row.setAttribute("class", "row");
 
         for (let j = 0; j < cols; j++) {
-            const col = document.createElement("div");
-            col.setAttribute("class", "col");
-            row.appendChild(col);
+            const cell = document.createElement("div");
+            cell.setAttribute("class", "cell");
+            row.appendChild(cell);
         }
         container.appendChild(row);
     }
