@@ -13,14 +13,23 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: 960px;
 }
 
-.col {
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.cell {
     border: grey 1px dotted;
-    height: 50px;
-    width: 50px;
+    flex: 1;
+    min-width: 9px; 
+    min-height: 9px; 
 }
 
-.col:hover {
+.cell:hover {
     background-color: #1f2937;
 }
