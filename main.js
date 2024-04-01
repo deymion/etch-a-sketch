@@ -1,9 +1,21 @@
 let container = document.querySelector(".container");
+let btnGrid = document.querySelector("#newGrid");
 
 createGrid(16, 16);
 
 container.addEventListener('mouseover', (event) => {
     setRandomBgColor(event.target);
+});
+
+btnGrid.addEventListener('click', () => {
+    let side = Number(prompt("Number of squares per side (maximum 100):"));
+
+    if (isNaN(side) || side < 1 || side > 100) {
+        alert("Grid square only accepts numbers in the range of 1 to 100.");
+    } else {
+        removeGrid();
+        createGrid(side, side);
+    }
 });
 
 function createGrid(rows = 1, cols = 1) {
@@ -18,6 +30,14 @@ function createGrid(rows = 1, cols = 1) {
             row.appendChild(cell);
         }
         container.appendChild(row);
+    }
+}
+
+function removeGrid() {
+    let gridRows = document.querySelectorAll('.row');
+
+    for (const grid of gridRows) {
+        container.removeChild(grid);
     }
 }
 
