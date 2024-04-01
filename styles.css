@@ -29,7 +29,3 @@ body {
     min-width: 9px; 
     min-height: 9px; 
 }
-
-.cell:hover {
-    background-color: #1f2937;
-}

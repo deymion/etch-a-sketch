@@ -1,6 +1,10 @@
-container = document.querySelector(".container");
+let container = document.querySelector(".container");
 
 createGrid(16, 16);
+
+container.addEventListener('mouseover', (event) => {
+    setRandomBgColor(event.target);
+});
 
 function createGrid(rows = 1, cols = 1) {
 
@@ -24,4 +28,9 @@ function random(min, max) {
 
 function randomColor() {
     return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
+}
+
+function setRandomBgColor(selector) {
+    const newBgColor = randomColor();
+    selector.style.setProperty("background-color", newBgColor);
 }
